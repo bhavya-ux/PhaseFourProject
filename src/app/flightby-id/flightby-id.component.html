@@ -1,0 +1,40 @@
+<ng-container *ngIf="!flight">
+    <div>
+        <h3 style="text-decoration: underline;">Search for your flight!</h3>
+        <table border="1px">
+            <tr>
+                <td><input type="number" [(ngModel)]="id" placeholder="Enter ID"></td>
+            </tr>
+        </table>
+        <button (click)="flightbyID()">Search!</button>
+    </div>
+</ng-container>
+
+<table border="1px" *ngIf = "flight">
+    <thead>
+     <th>Airline ID</th>
+     <th>Airline Name</th>
+     <th>Available Seats</th>
+     <th>Flight Date</th>
+     <th>Flight Code</th>
+     <th>Flight ID</th>
+     <th>Flight Fare</th>
+     <th>Flight Source</th>
+     <th>Flight Destination</th>
+     <th>Route ID</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{flight.airline.airlineId}}</td>
+            <td>{{flight.airline.airlineName}}</td>
+            <td>{{flight.available_seats}}</td>
+            <td>{{flight.date}}</td>
+            <td>{{flight.flightCode}}</td>
+            <td>{{flight.flightId}}</td>
+            <td>{{flight.price}}</td>
+            <td>{{flight.route.source}}</td>
+            <td>{{flight.route.destination}}</td>
+            <td>{{flight.route.routeId}}</td>
+        </tr>
+    </tbody>
+</table>

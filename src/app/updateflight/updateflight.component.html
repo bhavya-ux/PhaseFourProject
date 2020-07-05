@@ -1,0 +1,39 @@
+<div>
+    <h3 style="text-decoration: underline;">Update Flight Details</h3>
+    <table border="1px">
+        <tr>
+            <td><input type="number" [(ngModel)]="flight.airline.airlineID" placeholder="Airline ID"><td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="flight.airline.airlineName" placeholder="Airline Name"></td>
+        </tr>
+        <tr>
+            <td><input type="number" [(ngModel)]="flight.available_seats" placeholder="Available Seats"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="flight.date" placeholder="Date"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="flight.flightCode" placeholder="Flight Code"></td>
+        </tr>
+        <tr>
+            <td><input type="number" [(ngModel)]="flight.flightId" placeholder="Flight ID"></td>
+        </tr>
+        <tr>
+            <td><input type="number" [(ngModel)]="flight.price" placeholder="Flight Price"></td>
+        </tr>
+        <tr>
+            <td><input type="number" [(ngModel)]="flight.route.routeId" placeholder="Route ID"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="flight.route.source" placeholder="Flight Source"></td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="flight.route.destination" placeholder="Flight Destination"></td>
+        </tr>
+    </table>
+    
+    <button (click)="updateflight()">Update</button>
+
+</div>
+

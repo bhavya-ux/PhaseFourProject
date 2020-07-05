@@ -1,0 +1,43 @@
+<ng-container *ngIf="!result">
+    <div>
+        <h3 style="text-decoration: underline;">Search for passenger!</h3>
+        <table border="1px">
+            <tr>
+                <td><input type="number" [(ngModel)]="id" placeholder="Enter ID"></td>
+            </tr>
+        </table>
+        <button (click)="passengerbyID()">Search!</button>
+    </div>
+</ng-container>
+
+<table border="1px" *ngIf = "result">
+    <thead>
+     <th>Passenger ID</th>
+     <th>Passenger Name</th>
+     <th>Airline Name</th>
+     <th>Available Seats</th>
+     <th>Flight Date</th>
+     <th>Flight Code</th>
+     <th>Flight Fare</th>
+     <th>Flight Source</th>
+     <th>Flight Destination</th>
+     <th>Payment method</th>
+     <th>Seat number</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{result.passengerId}}</td>
+            <td>{{result.name}}</td>
+            <td>{{result.flight.airline.airlineName}}</td>
+            <td>{{result.flight.available_seats}}</td>
+            <td>{{result.flight.date}}</td>
+            <td>{{result.flight.flightCode}}</td>
+            <td>{{result.flight.price}}</td>
+            <td>{{result.flight.route.source}}</td>
+            <td>{{result.flight.route.destination}}</td>
+            <td>{{result.payment_method}}</td>
+            <td>{{result.seat_no}}</td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,11 @@
+<ng-container *ngIf="!flight">
+    <div>
+        <h3 style="text-decoration: underline;">Delete flight details!</h3>
+        <table border="1px">
+            <tr>
+                <td><input type="number" [(ngModel)]="id" placeholder="Enter ID"></td>
+            </tr>
+        </table>
+        <button (click)="removeflight()">Search!</button>
+    </div>
+</ng-container>
